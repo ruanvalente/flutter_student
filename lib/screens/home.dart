@@ -1,3 +1,4 @@
+import 'package:app/components/title.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -11,36 +12,24 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Text('Gerencie\n suas plantas de \n forma fácil',
-                style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54),
-                textAlign: TextAlign.center),
+            TitleApp(
+                title: 'Gerencie\n suas plantas de \n forma fácil', size: 36),
             Image(
-              image: AssetImage('watering.png'),
+              image: AssetImage('assets/watering.png'),
             ),
-            Text(
-              'Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você sempre que precisar',
-              style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.normal,
-                  color: Colors.black54),
-              textAlign: TextAlign.center,
-            ),
+            TitleApp(
+                title:
+                    'Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você sempre que precisar',
+                size: 17),
             Container(
-              width: 100,
+              width: 200,
               height: 80,
               child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    '>',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
+                  padding: const EdgeInsets.all(20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text('Começar'),
+                  )),
             )
           ],
         ),
