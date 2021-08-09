@@ -27,7 +27,9 @@ class Home extends StatelessWidget {
               child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/user');
+                    },
                     child: Text('Começar'),
                   )),
             )
