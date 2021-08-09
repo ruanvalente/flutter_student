@@ -1,5 +1,6 @@
 import 'package:app/screens/home.dart';
 import 'package:app/screens/user_input.dart';
+import 'package:app/screens/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        title: 'Plantmanager',
         theme: ThemeData(primarySwatch: Colors.green),
+        routes: <String, WidgetBuilder>{
+          '/user': (BuildContext context) => UserInput(),
+          '/welcome': (BuildContext context) => WelcomeApp(),
+        },
         home: Home());
   }
 }
