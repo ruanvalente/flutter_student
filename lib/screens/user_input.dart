@@ -1,3 +1,4 @@
+import 'package:app/components/title.dart';
 import 'package:flutter/material.dart';
 
 class UserInput extends StatefulWidget {
@@ -27,34 +28,37 @@ class _UserInputState extends State<UserInput> {
           padding: const EdgeInsets.all(20),
           child: Text('😀', style: TextStyle(fontSize: 36)),
         ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 20),
-          child: Text(
-            'Como podemos chamar você?',
-            style: TextStyle(fontSize: 24, color: Colors.black54),
-            textAlign: TextAlign.center,
+        SizedBox(
+          height: 80,
+          child: TitleApp(
+            title: 'Como podemos chamar você?',
+            size: 24,
+            color: Colors.black54,
           ),
         ),
         Container(
           width: 350,
           child: TextField(
-            autofocus: true,
             controller: textInputUserController,
             decoration: InputDecoration(
-                border: OutlineInputBorder(), hintText: 'Digite seu nome'),
+                labelText: 'Nome',
+                border: OutlineInputBorder(),
+                hintText: 'Digite seu nome'),
           ),
         ),
         Container(
           width: 200,
           height: 80,
           child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/welcome');
-                    print(textInputUserController.text);
-                  },
-                  child: Text('Continuar'))),
+            padding: const EdgeInsets.all(20),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/welcome');
+                print(textInputUserController.text);
+              },
+              child: Text('Continuar'),
+            ),
+          ),
         )
       ],
     )));
