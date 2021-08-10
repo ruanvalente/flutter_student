@@ -1,3 +1,4 @@
+import 'package:app/components/title.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeApp extends StatelessWidget {
@@ -14,19 +15,21 @@ class WelcomeApp extends StatelessWidget {
               '😄',
               style: TextStyle(fontSize: 96),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 40),
-              child: Text('Prontinho',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500)),
+            SizedBox(
+              height: 40,
+              child: TitleApp(
+                title: 'Prontinho',
+                size: 24,
+                weight: FontWeight.w500,
+              ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Padding(
-                padding: const EdgeInsets.all(20),
-                child: Text(
+            SizedBox(
+              height: 40,
+              child: TitleApp(
+                title:
                     'Agora vamos começar a cuidar das suas plantinhas com muito cuidado.',
-                    style: TextStyle(fontSize: 17, color: Colors.black54),
-                    textAlign: TextAlign.center),
+                size: 17,
+                color: Colors.black54,
               ),
             ),
             Container(
